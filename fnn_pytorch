@@ -1,2 +1,133 @@
 # here I am working with MNIST data set to train Forward Neural Network with read the numbers given in MNIST data set.
 
+#IMPORTING ALL THE IMPORTANT LIBRARIES
+import torch
+import torch.nn as nn
+import torchvision.transforms as transforms # TO TRANSFORM RAW DATA IN FORM OF TENSOR
+import torchvision.datasets as dsets #TO LOAD THE DATA IN ITERABLE FORM
+In [30]:
+# IMPORTING DATA
+train_dataset = dsets.MNIST(root='./data', 
+                            train=True, 
+                            transform=transforms.ToTensor(),
+                            download=True)
+
+test_dataset = dsets.MNIST(root='./data', 
+                           train=False, 
+                           transform=transforms.ToTensor())
+In [31]:
+# MAKING DATA SET ITERABLE 
+# DEFINING BATCH_SIZE, ITERATION, EPOCHS
+# HERE WE ARE ITERATING THROUGH DATA SET 5 TIME (MEANING EPOCHS = 5)
+batch_size = 100
+n_iters = 3000
+num_epochs = n_iters / (len(train_dataset) / batch_size)
+num_epochs = int(num_epochs)
+
+train_loader = torch.utils.data.DataLoader(dataset=train_dataset, 
+                                           batch_size=batch_size, 
+                                           shuffle=True)
+
+test_loader = torch.utils.data.DataLoader(dataset=test_dataset, 
+                                          batch_size=batch_size, 
+                                          shuffle=False)
+In [32]:
+#CREATING MODEL CLASS
+#DEFINING FEED FORWARD PATH
+class FeedforwardNeuralNetModel(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super(FeedforwardNeuralNetModel, self).__init__()
+        # Linear function to map input to hidden layer
+        self.fc1 = nn.Linear(input_dim, hidden_dim) 
+        # Non-linearity (RELU)
+        self.relu = nn.ReLU()
+        # Linear function to map hidden layer to output
+        self.fc2 = nn.Linear(hidden_dim, output_dim)  
+
+    def forward(self, x):
+        # Linear function
+        out = self.fc1(x)
+        # Non-linearity
+        out = self.relu(out)
+        # Linear function 
+        out = self.fc2(out)
+        return out
+
+#CREATING A INSTANCE (MODEL OF THE DEFINED CLASS- FeedforwardNeuralNetModel)
+input_dim = 28*28
+hidden_dim = 100
+output_dim = 10
+
+model = FeedforwardNeuralNetModel(input_dim, hidden_dim, output_dim)
+
+# DEFING LOSS FUNCTION SOFTMAX ------> CROSS ENTROPY 
+criterion = nn.CrossEntropyLoss()
+
+
+#CALLING OPTIMIZER(SGD)
+learning_rate = 0.1
+
+optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+
+
+# TRAINING THE MODEL EPOCHS = 5, ITERATION = 3000
+
+iter = 0
+for epoch in range(num_epochs):
+    for i, (images, labels) in enumerate(train_loader): #loading 100(batch size) at each run of the for loop which results in one iter
+        # Loading images with gradient accumulation capabilities
+        images = images.view(-1, 28*28).requires_grad_()
+     
+        # Clear gradients w.r.t. parameters
+        optimizer.zero_grad()
+
+        # Forward pass to get output with image input
+        outputs = model(images)
+
+        # Calculate Loss: softmax --> cross entropy loss
+        loss = criterion(outputs, labels)
+
+        # Getting gradients w.r.t. parameters
+        loss.backward()
+
+        # Updating parameters
+        optimizer.step()
+
+        iter += 1
+
+        if iter % 500 == 0:
+            # Calculate Accuracy on test data of 10000 data set     
+            correct = 0
+            total = 0
+            # Iterate through test dataset
+            for images, labels in test_loader:
+                # Load images with gradient accumulation capabilities
+                images = images.view(-1, 28*28).requires_grad_()
+                
+                # Forward pass only to get output
+                outputs = model(images)
+               
+                # Get predictions from the maximum value
+                _, predicted = torch.max(outputs.data, 1)
+                
+                # Total number of labels
+                total += labels.size(0)
+
+                # Total correct predictions
+                correct += (predicted == labels).sum()
+
+            accuracy = 100 * correct / total
+
+            # Print Loss
+            print('Iteration: {}. Loss: {}. Accuracy: {}'.format(iter, loss.item(), accuracy))
+            
+            
+            
+            
+Iteration: 500. Loss: 0.26846015453338623. Accuracy: 91
+Iteration: 1000. Loss: 0.43513691425323486. Accuracy: 93
+Iteration: 1500. Loss: 0.20258113741874695. Accuracy: 94
+Iteration: 2000. Loss: 0.1549646258354187. Accuracy: 94
+Iteration: 2500. Loss: 0.17331655323505402. Accuracy: 95
+Iteration: 3000. Loss: 0.21914337575435638. Accuracy: 95
+
