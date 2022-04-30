@@ -1,7 +1,7 @@
 Welcome to Anshul's Repository:
 
 
-In these repositories I put all the pratice I did related to **Machine Learning, Data Science, Computer vision, Reinforcment learning and Robotics** related topics. This repository reflects my hands on expereince with:
+In these repositories I put all the pratice I did related to **Machine Learning, Data Science, Computer vision, Reinforcement learning and Robotics** related topics. This repository reflects my hands on expereince with:
 
 
 1. **Robotics**- Python driver control of UR robots, Robot kinematics scripts, GUI creation to set points for robot for pick and place application, Pybullet, Gazebo and ROS
