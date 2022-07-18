@@ -160,9 +160,9 @@ void unit_test (string f, string g)
 {   
     //bad input check and exception throwing 
     unit_test ("12.0a.1996", "11.02");
-    unit_test ("12.0a.1996", "1a.02");
-    unit_test ("12.0.1996", "1a.02");
-    unit_test ("12..1996", "1a.02");
+    unit_test ("12.**.1996", "1a.02");
+    unit_test ("12.0.1996", "1&.02");
+    unit_test ("12..1996", "1#.02");
     
     
     //good input check
