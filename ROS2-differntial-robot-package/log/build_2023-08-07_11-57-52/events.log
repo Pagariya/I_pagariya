@@ -1,0 +1,46 @@
+[0.000000] (-) TimerEvent: {}
+[0.000110] (two_wheeled_robot) JobQueued: {'identifier': 'two_wheeled_robot', 'dependencies': OrderedDict()}
+[0.000136] (two_wheeled_robot) JobStarted: {'identifier': 'two_wheeled_robot'}
+[0.007466] (two_wheeled_robot) JobProgress: {'identifier': 'two_wheeled_robot', 'progress': 'cmake'}
+[0.007735] (two_wheeled_robot) Command: {'cmd': ['/usr/bin/cmake', '/home/nisar/agrobot-Gazebo/ros2-exp/yellow_bot/dev_ws/src/two_wheeled_robot', '-DCMAKE_INSTALL_PREFIX=/home/nisar/agrobot-Gazebo/ros2-exp/yellow_bot/dev_ws/src/two_wheeled_robot/install/two_wheeled_robot'], 'cwd': '/home/nisar/agrobot-Gazebo/ros2-exp/yellow_bot/dev_ws/src/two_wheeled_robot/build/two_wheeled_robot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nisar'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '2101'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/nisar'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '1862'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d58fb174a6683169b62e737264d0c005'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/home/nisar/dev_ws'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'nisar'), ('JOURNAL_STREAM', '8:41969'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nisar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nisar-XMG-APEX-Mid-2021:@/tmp/.ICE-unix/2177,unix/nisar-XMG-APEX-Mid-2021:/tmp/.ICE-unix/2177'), ('INVOCATION_ID', '7850f2a1d4824a2d8f09eead73256b56'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9d4f5885_3402_4b5e_97c2_be2c6ca91de2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://192.168.10.239:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nisar/agrobot-Gazebo/ros2-exp/yellow_bot/dev_ws/src/two_wheeled_robot/build/two_wheeled_robot'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d58fb174a6683169b62e737264d0c005'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ROS_HOSTNAME', '192.168.10.148'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[0.099543] (-) TimerEvent: {}
+[0.115190] (two_wheeled_robot) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.196828] (two_wheeled_robot) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.199655] (-) TimerEvent: {}
+[0.203805] (two_wheeled_robot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.276123] (two_wheeled_robot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.277122] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299786] (-) TimerEvent: {}
+[0.363514] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.376527] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.376846] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.378785] (two_wheeled_robot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.399942] (-) TimerEvent: {}
+[0.452574] (two_wheeled_robot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.454660] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500041] (-) TimerEvent: {}
+[0.531737] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.544951] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.545280] (two_wheeled_robot) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.552682] (two_wheeled_robot) StderrLine: {'line': b'CMake Error at CMakeLists.txt:19 (find_package):\n'}
+[0.552795] (two_wheeled_robot) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[0.552869] (two_wheeled_robot) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[0.553013] (two_wheeled_robot) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[0.553080] (two_wheeled_robot) StderrLine: {'line': b'\n'}
+[0.553135] (two_wheeled_robot) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[0.553185] (two_wheeled_robot) StderrLine: {'line': b'  any of the following names:\n'}
+[0.553233] (two_wheeled_robot) StderrLine: {'line': b'\n'}
+[0.553281] (two_wheeled_robot) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[0.553326] (two_wheeled_robot) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[0.553370] (two_wheeled_robot) StderrLine: {'line': b'\n'}
+[0.553413] (two_wheeled_robot) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[0.553457] (two_wheeled_robot) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[0.553501] (two_wheeled_robot) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[0.553544] (two_wheeled_robot) StderrLine: {'line': b'  has been installed.\n'}
+[0.553587] (two_wheeled_robot) StderrLine: {'line': b'\n'}
+[0.553629] (two_wheeled_robot) StderrLine: {'line': b'\n'}
+[0.553671] (two_wheeled_robot) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.553718] (two_wheeled_robot) StdoutLine: {'line': b'See also "/home/nisar/agrobot-Gazebo/ros2-exp/yellow_bot/dev_ws/src/two_wheeled_robot/build/two_wheeled_robot/CMakeFiles/CMakeOutput.log".\n'}
+[0.554623] (two_wheeled_robot) CommandEnded: {'returncode': 1}
+[0.586914] (two_wheeled_robot) JobEnded: {'identifier': 'two_wheeled_robot', 'rc': 1}
+[0.598043] (-) EventReactorShutdown: {}
