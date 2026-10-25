@@ -1,0 +1,11 @@
+{
+  "name": "Universal Robot Control C++20",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {},
+  "postCreateCommand": "curl -fsSL https://pixi.sh/install.sh | bash && echo 'Run: ~/.pixi/bin/pixi run test'",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools", "ms-vscode.cmake-tools", "ms-python.python"]
+    }
+  }
+}

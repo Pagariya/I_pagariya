@@ -1,0 +1,90 @@
+/***************************************************************************
+  tag: wmeeusse Tue Oct 24 08:45:49 2006 +0000 rtt-config.h.in
+
+                        rtt-config.h.in -  description
+                           -------------------
+    begin                : Tue Oct 24 2006
+    copyright            : (C) 2006 Peter Soetens
+    email                : peter.soetens@fmtc.be
+
+ ***************************************************************************
+ *   This library is free software; you can redistribute it and/or         *
+ *   modify it under the terms of the GNU General Public                   *
+ *   License as published by the Free Software Foundation;                 *
+ *   version 2 of the License.                                             *
+ *                                                                         *
+ *   As a special exception, you may use this file as part of a free       *
+ *   software library without restriction.  Specifically, if other files   *
+ *   instantiate templates or use macros or inline functions from this     *
+ *   file, or you compile this file and link it with other files to        *
+ *   produce an executable, this file does not by itself cause the         *
+ *   resulting executable to be covered by the GNU General Public          *
+ *   License.  This exception does not however invalidate any other        *
+ *   reasons why the executable file might be covered by the GNU General   *
+ *   Public License.                                                       *
+ *                                                                         *
+ *   This library is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU     *
+ *   General Public License for more details.                              *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public             *
+ *   License along with this library; if not, write to the Free Software   *
+ *   Foundation, Inc., 59 Temple Place,                                    *
+ *   Suite 330, Boston, MA  02111-1307  USA                                *
+ *                                                                         *
+ ***************************************************************************/
+
+
+#ifndef RTT_TYPEKIT_CONFIG_H
+#define RTT_TYPEKIT_CONFIG_H
+
+#include "../rtt-config.h"
+
+//
+// See: <http://gcc.gnu.org/wiki/Visibility>
+//
+#define RTT_GCC_HASVISIBILITY
+#if defined(__GNUG__) && defined(RTT_GCC_HASVISIBILITY) && (defined(__unix__) || defined(__APPLE__))
+
+# if defined(RTT_TYPEKIT_DLL_EXPORT)
+   // Use RTT_TYPEKIT_API for normal function exporting
+#  define RTT_TYPEKIT_API    __attribute__((visibility("default")))
+
+   // Use RTT_TYPEKIT_EXPORT for static template class member variables
+   // They must always be 'globally' visible.
+#  define RTT_TYPEKIT_EXPORT __attribute__((visibility("default")))
+
+   // Use RTT_TYPEKIT_HIDE to explicitly hide a symbol
+#  define RTT_TYPEKIT_HIDE   __attribute__((visibility("hidden")))
+#  define RTT_TYPEKIT_EXT_TMPL extern
+# else
+#  define RTT_TYPEKIT_API
+#  define RTT_TYPEKIT_EXPORT __attribute__((visibility("default")))
+#  define RTT_TYPEKIT_HIDE   __attribute__((visibility("hidden")))
+#  define RTT_TYPEKIT_EXT_TMPL extern
+# endif
+#else
+   // NOT GNU
+# if defined( __MINGW__ ) || defined( WIN32 )
+#  if defined(RTT_TYPEKIT_DLL_EXPORT)
+#   define RTT_TYPEKIT_API    __declspec(dllexport)
+#   define RTT_TYPEKIT_EXPORT __declspec(dllexport)
+#   define RTT_TYPEKIT_HIDE   
+#   define RTT_TYPEKIT_EXT_TMPL extern
+#  else
+#   define RTT_TYPEKIT_API	 __declspec(dllimport)
+#   define RTT_TYPEKIT_EXPORT __declspec(dllexport)
+#   define RTT_TYPEKIT_HIDE 
+#   define RTT_TYPEKIT_EXT_TMPL extern
+#  endif
+# else
+#  define RTT_TYPEKIT_API
+#  define RTT_TYPEKIT_EXPORT
+#  define RTT_TYPEKIT_HIDE
+#  define RTT_TYPEKIT_EXT_TMPL
+# endif
+#endif
+
+#endif
+

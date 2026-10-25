@@ -1,0 +1,5 @@
+build/
+.pixi/
+.cache/
+*.log
+__pycache__/
