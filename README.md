@@ -7,7 +7,7 @@ A collection of hands-on projects in **Robotics, Machine Learning, Computer Visi
 ### 1. Whole Body Control [Universal Robot Control Framework](whole-body-control/universal-robot-control)
 Modular **C++20** framework built with **Pinocchio and Eigen**, featuring URDF-based robot modeling, rigid-body dynamics (**CRBA, RNEA, ABA**), computed-torque control, and 3D Cartesian impedance control.
 
-![Robot control architecture](whole-body-control/universal-robot-control/docs/Universal Robot Control Overview.png)
+![Universal Robot Control Architecture](whole-body-control/universal-robot-control/docs/Universal%20Robot%20Control%20Overview.png)
 
 ### 2. ROS1_agrobot_package
 ROS 1 agricultural robot simulation in Gazebo using **RTAB-Map visual SLAM**.
@@ -19,8 +19,10 @@ ROS 2 differential-drive robot simulation with **Gazebo, ROS 2 controllers, and 
 
 ![Differential-drive robot](https://github.com/Pagariya/I_pagariya/assets/51029506/d35314bd-98f2-4023-8438-4182c96b4ce4)
 
-### 4. Robotics
-Python drivers for Universal Robots, robot kinematics, pick-and-place GUIs, PyBullet, Gazebo, and ROS.
+### 4 Qt–ROS Integration (C++)
+
+A C++ application integrating Qt and ROS, demonstrating GUI development, signal-slot communication, and event-driven robotics software.
+https://github.com/Pagariya/I_pagariya/blob/master/qt_ros_c%2B%2B.zip
 
 ### 5. Machine Learning and Computer Vision
 Deep learning, classification, feature selection, and feature importance.
