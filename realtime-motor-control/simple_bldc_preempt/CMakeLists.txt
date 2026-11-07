@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(simple_bldc_preempt LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(simple_bldc main.cpp)
+target_compile_options(simple_bldc PRIVATE -O2 -Wall -Wextra)
