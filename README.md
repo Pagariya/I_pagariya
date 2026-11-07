@@ -1,6 +1,6 @@
 # Welcome to Anshul's Repository
 
-A collection of hands-on projects in **Robotics, Machine Learning, Computer Vision, Reinforcement Learning, and Data Science**.
+A collection of hands-on projects in **Robotics, whole body control, Real time control, Machine Learning, Computer Vision, Reinforcement Learning, and Data Science**.
 
 ## Projects
 
